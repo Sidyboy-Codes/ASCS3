@@ -38,9 +38,7 @@ const Video = () => {
 
       <div className="video__guest">
         <div className="video__guest__card">
-          <div className="video__guest__img">
-            <img src={tempAvatar} alt="" />
-          </div>
+          <img src={tempAvatar} alt="" />
 
           <div className="video_guest__text">
             <h1>Event Guest</h1>
@@ -49,9 +47,7 @@ const Video = () => {
         </div>
 
         <div className="video__guest__card">
-          <div className="video__guest__img">
-            <img src={tempAvatar} alt="" />
-          </div>
+          <img src={tempAvatar} alt="" />
 
           <div className="video_guest__text">
             <h1>Event Host</h1>
