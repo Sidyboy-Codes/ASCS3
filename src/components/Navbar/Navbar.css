@@ -1,0 +1,93 @@
+nav {
+z-index: 9;
+  background-color: #fffafa;
+  color: #2d2d2d;
+
+  position: sticky;
+  top: 0;
+  padding: clamp(0.35rem,1%,0.55rem) 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #dadada;
+
+  box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+  width: clamp(3.4rem, 18%, 4.8rem);
+}
+
+.navbar__smScreen .hamburger-react {
+  height: fit-content;
+  width: fit-content;
+}
+.navbar__smScreen__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.5px);
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.navbar__smScreen__menu .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.navbar__lgScreen {
+  display: none;
+}
+
+nav .social__links {
+  display: flex;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: space-between;
+  width: clamp(1rem,30%,10rem);
+}
+
+nav .social__links svg {
+  display: flex;
+  align-items: center;
+}
+
+@media (width>=760px) {
+  nav {
+    justify-content: flex-start;
+  }
+  .navbar__smScreen {
+    display: none;
+  }
+
+  .navbar__lgScreen {
+    margin-left: 6%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+  }
+  .navbar__lgScreen__menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+  .navbar__lgScreen__menu .links {
+    display:flex ;
+    width: clamp(1px,80%,26rem);
+    justify-content: space-between;
+    margin-right: 1rem;
+  }
+}
