@@ -8,6 +8,10 @@ import Sponsor from "./components/Sponsor/Sponsor";
 import Team from "./components/Team/Team";
 import Video from "./components/Video/Video";
 
+const scrollHandle = () => {
+  console.log("im scrolling");
+};
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +20,50 @@ function App() {
       <Sponsor />
       <Video />
       <About />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
+      <Charity />
+      <Team />
       <Charity />
       <Team />
     </div>
