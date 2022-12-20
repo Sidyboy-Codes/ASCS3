@@ -7,44 +7,47 @@ import "./About.css";
 
 const About = () => {
   const aboutRef = useRef();
-  const [imgScale, setImgScale] = useState(0);
-  const [titleOpc, setTitleOpc] = useState(0);
+  const [isOkay, setOkay] = useState(false);
+
+  let zoom = 1;
+  const zoomingSpeed = 6;
+  let a = 0;
+  let y = 0;
+  let count = 0;
+  let b;
+  const getPosition = () => {
+    console.log("this is count:" + count);
+    a = aboutRef.current.offsetTop;
+    y = window.scrollY;
+    if (a <= y) {
+      count++;
+      if (count === 1) {
+        b = y;
+        console.log("this is 1st count" + count);
+        console.log("this is 1st b" + count);
+      }
+
+      if (b < y) {
+        zoom += zoomingSpeed;
+        setImgScale(zoom);
+        b = y;
+        console.log("im inside incre, scale is" + scale);
+      } else {
+        zoom -= zoomingSpeed
+        setImgScale(zoom);
+        b = y;
+        console.log("im inside decr,scale is" + scale);
+      }
+    } else {
+      count = 0;
+      zoom = 1;
+      setImgScale(scale);
+    }
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", setBbSize);
+    window.addEventListener("scroll", getPosition);
   }, []);
-
-  // zooming basketball size
-  let about__offSet = 0;
-  let about__height = 0;
-  let pos = 0;
-  let scale = 0;
-  let zoomSpeed;
-  let opacity = 1;
-  const setBbSize = () => {
-    // checking height of about sec
-    about__height = aboutRef.current.clientHeight;
-
-    // calculating offset of about sec div
-    about__offSet = aboutRef.current.offsetTop - window.scrollY;
-    pos = about__offSet * -1;
-
-    // setting image scale according to position of about div
-    // if small screen zoom speed will be more
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      zoomSpeed = 760;
-      opacity = (pos / (about__height/2)) * -1 + 0.9;
-      setTitleOpc(opacity);
-    } else {
-      zoomSpeed = 260;
-      setTitleOpc(1);
-    }
-    scale = (pos / about__height) * zoomSpeed;
-    console.log(scale);
-    setImgScale(scale);
-
-
-  };
 
   // lottie animation
   const defaultOptions = {
@@ -54,18 +57,19 @@ const About = () => {
   };
 
   return (
-    <section id="about" ref={aboutRef}>
-      <div className="about__sticky">
-        <div className="about__title" style={{ opacity: `${titleOpc}` }}>
-          <h1>
-            Why
-            <br />
-            All-star
-            <br />
-            Charity Shootout?
-          </h1>
-        </div>
-        <img src={grayBb} style={{ width: `${imgScale}vw` }} />
+    <section id="about" className="container" ref={aboutRef}>
+      <div className="ball__holder">
+        <img src={grayBb}/>
+      </div>
+
+      <div className="about__title">
+        <h1>
+          Why
+          <br />
+          All-star
+          <br />
+          Charity Shootout?
+        </h1>
       </div>
 
       <div className="about__info">
@@ -98,3 +102,6 @@ const About = () => {
 };
 
 export default About;
+
+
+
