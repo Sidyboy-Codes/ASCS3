@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import About from "./components/About/About";
 import Charity from "./components/Charity/Charity";
+import GuestCarousel from "./components/GuestCarousel/GuestCarousel";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Sponsor from "./components/Sponsor/Sponsor";
@@ -19,6 +20,7 @@ function App() {
       <Hero />
       <Sponsor />
       <Video />
+      <GuestCarousel/>
       <About />
       <Charity />
       <Team />

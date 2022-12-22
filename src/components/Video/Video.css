@@ -46,37 +46,7 @@
   cursor: pointer;
 }
 
-.video__guest {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
 
-.video__guest__card {
-  margin: auto;
-  width: 65%;
-  max-width: 18rem;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.video__guest__card img {
-  width: 100%;
-  max-width: 18rem;
-  border-radius: 10px;
-}
-
-.video_guest__text {
-  text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-}
 
 @media (width>=760px) {
   .video__card {

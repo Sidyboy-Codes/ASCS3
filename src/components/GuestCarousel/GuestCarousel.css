@@ -1,0 +1,43 @@
+.guest__card__container {
+  text-align: center;
+  background-color: #272727;
+  padding: 2rem 0;
+}
+
+.guest__card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  margin: auto;
+  width: 90%;
+  /* height: 20rem; */
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+}
+
+.guest__card img{
+    width: 100%;
+}
+
+.guest__card__text{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (width>=1020px) {
+    .guest__card{
+        flex-direction: row;
+    }
+    .guest__card img{
+        width: 50%;
+    }
+
+    .guest__card__text{
+       text-align: left;
+    }
+    
+}
